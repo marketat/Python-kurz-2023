@@ -34,15 +34,27 @@ body: {
     "Dalibor Kadlec": 8,
     "Robert Pospíšil": 36
 }
+prospech = {}
 
 for jmeno, vysledek in body.items(): 
         if vysledek >= 60:
             print(f"{jmeno}: Pass")
+            
         else:
             print(f"{jmeno}: Fail")
 
+for klic in prospech:
+     klic = body[jmeno]
+
+for hodnoty in prospech:
+     hodnoty = body[vysledek]
+
+print(prospech)          
+
 with open('prospech.json', mode='w', encoding='utf-8') as soubor:
-      json.dump(body, soubor, ensure_ascii=False)
+      json.dump(prospech, soubor, ensure_ascii=False)
+
+#po milionech pokusů nejsem schopná spojit nový slovník prospech s upravenými výstupy slovníku body...
 
 
 

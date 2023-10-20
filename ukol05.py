@@ -38,23 +38,9 @@ teploty = [
 ]
 
 
-d = [d[0] for d in teploty]
-print(d)
-
-
-t = [t[1:4] for t in teploty]
-print(t)
-
 prumer = {}
+import statistics
 
-""""prumer = {} for d, t in teploty:
-    prumer[d] = t
-
-prumer = dict((d, t) for d, t in teploty
-prumer = {den: teplota for den, teplota in enumerate(teploty)}
-prumer = {f"(hodnota[0])": statistics.mean(hodnota[1:4]) for hodnota[0], hodnota in teploty}
-
-prumer = {d: statistics.mean(t) for d, t in teploty}
-"""
+prumer = [{(h[0]): (statistics.mean(h[1:4]))} for h in teploty]          
 
 print(prumer)
